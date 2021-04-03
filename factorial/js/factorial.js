@@ -3,10 +3,7 @@ const factorial = (n) => {
     throw new Error('Invalid input!')
   }
 
-  if (n < 2) {
-    return 1
-  }
-  return (n * factorial(n-1))
+  return n < 2 ? 1 : n * factorial(n-1)
 }
 
 module.exports = factorial
