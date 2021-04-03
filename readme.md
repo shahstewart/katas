@@ -4,6 +4,6 @@ I am Sangeeta :wave:. While I am busy training in other fields, I keep my progra
 
 I will write solutions to each kata in one or more languages. The languages I will be using are: JavaScript, Python, PHP, Go and R.
 
-Where ever possible, I will try to add unit tests as well. 
+Each Kata will be in its own directory with its own `readme.md` file that will describe the kata, and the types of solutions provided. Whenever possible, I will add unit tests and a note in readme.md on how to run those tests. 
 
 Hope someone finds these katas useful :pray:.
