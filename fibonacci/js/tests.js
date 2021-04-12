@@ -35,7 +35,7 @@ const tests = [
       assert.strictEqual(fibonacci(12), 144)
     }},
     {
-    name: 'should return 354224848179262000000  when n is 100',
+    name: 'should return 354224848179262000000  when n is 100', // this number is not accurate, however, that is the limitation of js
     test: () => {
       assert.strictEqual(fibonacci(100), 354224848179262000000 )
     }},
@@ -58,7 +58,7 @@ describe('simple recursive Fibonacci', () => {
 
 // recursive with global var
 fibonacci = require('./recursiveWithGlobalVar')
-describe('simple recursive Fibonacci', () => {
+describe('recursive Fibonacci with global var', () => {
   tests.forEach(test => {
     it(test.name, test.test)
   })
@@ -66,7 +66,7 @@ describe('simple recursive Fibonacci', () => {
 
 // forward recursive
 fibonacci = require('./forwardRecursive')
-describe('simple recursive Fibonacci', () => {
+describe('forward recursive Fibonacci', () => {
   tests.forEach(test => {
     it(test.name, test.test)
   })
@@ -74,7 +74,7 @@ describe('simple recursive Fibonacci', () => {
 
 // forward recursive using Array.reduce()
 fibonacci = require('./forwardRecursiveWithReduce')
-describe('simple recursive Fibonacci', () => {
+describe('forward recursive with array.reduce Fibonacci', () => {
   tests.forEach(test => {
     it(test.name, test.test)
   })

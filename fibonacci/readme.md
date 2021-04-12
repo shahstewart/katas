@@ -23,16 +23,23 @@ I have added 3 solutions plus some variations of them here. All solutions, as ex
     
 
 - **forward recursive variants:**
-  This algorithm mitigates the necessity of storing computational results in a global   variable by using forward recursion, and passing the result of the computation to the next iteration of computation. It has complexity of (O(n)), and we don't have to worry about using global variables. These solutions seem to be the best suited for computing Fibonacci numbers.
+  This algorithm mitigates the necessity of storing computational results in a global   variable by using forward recursion, and passing the result of the computation to the next iteration of computation. It has complexity of (O(n)), and we don't have to worry about using global variables. These solutions seem to be the best suited for computing Fibonacci numbers.  
+  &nbsp;  
   
-**_**note:_**
-Please keep in mind that not all languages are designed to crunch large numbers.  
+
+  
+**_Notes:_**
+* Please keep in mind that not all languages are designed to crunch large numbers.  
+    
+
+* When running calculations in JavaScript, all operations involving numbers larger than `Number.MAX_SAFE_INTEGER` (9007199254740991) will be inaccurate as all numbers larger than the max_safe number are automatically rounded. This explains why Fibonacci calculations in our js scripts return value of fibonacci(100) as `354224848179262000000` instead of `354224848179261915075` as returned by Python scripts.  
+There are ways to bypass this issue using the `BigInt` data type. However, we are not going to go into that here.
 
 &nbsp;
 
-#### tests
+#### Tests
 _JavaScript:_ with _mocha_, run `mocha test.js` from the js folder (`katas/fibonacci/js`)
 
 _Python:_ with _pytest_,  run `py.test` from the python folder (`katas/fibonacci/python`)
 
-_php:_ with _phpunit_, run  `..\..\vendor\bin\phpunit TestFactorial.php` from the php folder (`katas/fibonacci/php`)  
+_php:_ with _phpunit_, run  `..\..\vendor\bin\phpunit TestFibonacci.php` from the php folder (`katas/fibonacci/php`)  

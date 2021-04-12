@@ -1,5 +1,5 @@
 /**
- * This is the most simple solution, but the worst in terms of complexity.
+ * This is the most simple solution, but the worst in terms of performance and complexity.
  * On a common PC, you will slow terribly/ run out our memory as you go close to 3 digits since this
  * solution has an exponential complexity.
  **/
