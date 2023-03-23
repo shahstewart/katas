@@ -34,7 +34,7 @@ DROP TABLE IF EXISTS public.players;
 
 CREATE TABLE IF NOT EXISTS public.players
 (
-    id integer NOT NULL,
+    id varchar NOT NULL,
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
     total_goals integer NOT NULL,

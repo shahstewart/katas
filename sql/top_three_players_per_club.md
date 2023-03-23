@@ -4,13 +4,13 @@ We have a **players** table that gets updated every year, with the new lifetime 
 of goals for the players after the latest season.
 
 ### Players table
-| Column      | Type |
-|-------------| ---- |
-| id          | varchar |
+| Column      | Type    |
+|-------------|---------|
+| id          | int     |
 | first_name  | varchar |
 | last_name   | varchar |
-| total_goals | int |
- | club_id     | int |  
+| total_goals | int     |
+ | club_id     | int     |  
 
 
 We also have the **clubs** table as:  
@@ -55,16 +55,16 @@ CREATE TABLE IF NOT EXISTS public.players
 );
 
 insert into players values
-('1', 'Jack', 'Spears', 333, 1),
-('2', 'Samantha', 'Spears', 223, 2),
-('3', 'Anne', 'Matte', 167, 3),
-('4', 'Dick', 'Donaldson', 120, 3),
-('5', 'Jill', 'Black', 33, 2),
-('6', 'James', 'Green', 240, 2),
-('7', 'Jock', 'Sespic', 27, 2),
-('8', 'Gerard', 'Runner', 130, 2),
-('9', 'Tom', 'Booths', 90, 1),
-('10', 'Bill', 'Brady', 133, 1);
+(1, 'Jack', 'Spears', 333, 1),
+(2, 'Samantha', 'Spears', 223, 2),
+(3, 'Anne', 'Matte', 167, 3),
+(4, 'Dick', 'Donaldson', 120, 3),
+(5, 'Jill', 'Black', 33, 2),
+(6, 'James', 'Green', 240, 2),
+(7, 'Jock', 'Sespic', 27, 2),
+(8, 'Gerard', 'Runner', 130, 2),
+(9, 'Tom', 'Booths', 90, 1),
+(10, 'Bill', 'Brady', 133, 1);
 
 DROP TABLE IF EXISTS public.clubs;
 
