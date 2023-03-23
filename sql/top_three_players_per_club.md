@@ -38,10 +38,52 @@ represent a unique player (no 2 player have the same firstname-lastname combinat
 | total_goals | int |  
 
 
-<br>  
+<br> 
+
+## Setup
+```postgresql
+DROP TABLE IF EXISTS public.players;
+
+CREATE TABLE IF NOT EXISTS public.players
+(
+    id integer NOT NULL,
+    first_name varchar(30) NOT NULL,
+    last_name varchar(30) NOT NULL,
+    total_goals integer NOT NULL,
+    club_id integer NOT NULL,
+    CONSTRAINT players_pkey PRIMARY KEY (id)
+);
+
+insert into players values
+('1', 'Jack', 'Spears', 333, 1),
+('2', 'Samantha', 'Spears', 223, 2),
+('3', 'Anne', 'Matte', 167, 3),
+('4', 'Dick', 'Donaldson', 120, 3),
+('5', 'Jill', 'Black', 33, 2),
+('6', 'James', 'Green', 240, 2),
+('7', 'Jock', 'Sespic', 27, 2),
+('8', 'Gerard', 'Runner', 130, 2),
+('9', 'Tom', 'Booths', 90, 1),
+('10', 'Bill', 'Brady', 133, 1);
+
+DROP TABLE IF EXISTS public.clubs;
+
+CREATE TABLE IF NOT EXISTS public.clubs
+(
+    id integer NOT NULL,
+    name varchar(30) NOT NULL,
+    CONSTRAINT clubs_pkey PRIMARY KEY (id)
+);
+
+insert into clubs values
+(1, 'Avocado Orchards'),
+(2, 'Melaluka Farms'),
+(3, 'Cane Cooks'),
+(4, 'Cypress Sprinters');
+```
+<br><br>
 
 ## Solution
-#### Postgresql
 ```postgresql
     select full_name, club_name, total_goals
     from (

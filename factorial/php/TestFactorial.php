@@ -17,7 +17,6 @@ final class TestFactorial extends TestCase
     public function testReturnsExpectedResponsesWhenInputIsValid():void
     {
         $this->assertEquals(1, factorial(1));
-        $this->assertEquals(1, factorial(1));
         $this->assertEquals(2, factorial(2));
         $this->assertEquals(6, factorial(3));
         $this->assertEquals(24, factorial(4));
