@@ -1,6 +1,6 @@
 ## Fibonacci Number
 
-#### Description
+### Description
 A Fibonacci number is an integer from a sequence of positive integers called _Fibonacci Sequence_, commonly written as _**F<sub>n</sub>**_ for the _**n<sup>th</sup>**_ number in the sequence.  
 Fibonacci sequence starts with 0 , 1 and each subsequent number is the sum of previous 2 numbers in the sequence. Therefore, 
 
@@ -11,7 +11,7 @@ To give you a better idea, this is how the beginning of Fibonacci sequence looks
 
 &nbsp;
 
-#### Solutions
+### Solutions
 I have added 3 solutions plus some variations of them here. All solutions, as expected for any function that works with a series, are recursive. However, the solutions use different algorithms, and have large performance differences.  
 
 - **simple recursive:**
@@ -37,9 +37,10 @@ There are ways to bypass this issue using the `BigInt` data type. However, we ar
 
 &nbsp;
 
-#### Tests
-_JavaScript:_ with _mocha_, run `mocha test.js` from the js folder (`katas/fibonacci/js`)
+### Tests
+**JavaScript:** with _mocha_, run `mocha test.js` from the js folder (`katas/programming/fibonacci/js`)
 
-_Python:_ with _pytest_,  run `py.test` from the python folder (`katas/fibonacci/python`)
+**Python:** with _pytest_,  run `py.test` from the python folder (`katas/programming/fibonacci/python`)
 
-_php:_ with _phpunit_, run  `..\..\vendor\bin\phpunit TestFibonacci.php` from the php folder (`katas/fibonacci/php`)  
+**php:** with _phpunit_, run  `..\..\..\vendor\bin\phpunit TestFibonacci.php` from the php folder 
+(`katas/programming/fibonacci/php`)  
