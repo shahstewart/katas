@@ -1,4 +1,6 @@
 # Smallest difference in scores
+This kata involves getting the smallest difference between values of a column.  
+
 We have a player's score table as follows:  
 
 ### Players table
@@ -62,6 +64,7 @@ where s.player != s2.player
 order by score_diff, s.player, s2.player DESC
 limit 1;
 ```
+<br>
 
 ## Tags
 self join, cross join, multiple order by, abs()

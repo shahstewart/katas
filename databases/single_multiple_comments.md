@@ -12,7 +12,7 @@ We have a **Comments** table that holds comment ids, post ids and user ids as fo
 <br><br>
 
 ## Question
-Given the comments table, write a query to counts of users that commented only once on 
+Given the comments table, write a query to retrieve counts of users that commented only once on 
 any post as *single_comment_users* and users that commented on any post more than once 
 as *multi_comment_users*.
 
@@ -57,9 +57,13 @@ insert into comments values
 ## Solution
 ```postgresql
 select 
-	count(distinct a.user_id) as single_comment_users, 
+	count(distinct a.user_id) as multi_comment_users, 
 	count(distinct c.user_id) - count(distinct a.user_id) as single_comment_users 
 from 
 	comments c,
 	(select user_id from comments group by user_id, post_id having(count(*) > 1)) a;
 ```
+<br>  
+
+## Tags
+count, count distinct, subquery, having()

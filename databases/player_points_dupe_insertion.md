@@ -80,4 +80,7 @@ join (select max(id::int) as id, first_name, last_name
 		group by first_name, last_name) as t
 on e.id::int = t.id
 ```
+<br>
 
+## Tags
+type coercion, subquery, group by, max()

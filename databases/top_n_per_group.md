@@ -1,4 +1,6 @@
-# Top three players 
+# Top three players
+
+This kata basically involves accessing top n values in a column per group.
 
 We have a **players** table that gets updated every year, with the new lifetime total
 of goals for the players after the latest season.
@@ -98,3 +100,7 @@ insert into clubs values
          ) t 
     where rownum < 4
 ```
+<br>
+
+## Tags
+window function, over(), partition by, row_number(), subquery, concat_ws()
