@@ -32,23 +32,25 @@ DROP TABLE IF EXISTS public.scores;
 
 CREATE TABLE IF NOT EXISTS public.scores
 (
-    id integer NOT NULL,
+    id serial primary key,
     player varchar(50) NOT NULL,
-    score integer NOT NULL,
-    CONSTRAINT scores_pkey PRIMARY KEY (id)
+    score integer NOT NULL
 );
 
-insert into scores values
-(1, 'Jack Spears', 80),
-(2, 'Samantha Spears', 83),
-(3, 'Anne Matte', 60),
-(4, 'Dick Donaldson', 76),
-(5, 'Jill Black', 88),
-(6, 'James Green', 75),
-(7, 'Jock Sespaniak', 64),
-(8, 'Gerard Runner', 58),
-(9, 'Tom Booths', 90),
-(10, 'Bill Brady', 69);
+insert into scores (player, score)
+values
+('Jack Spears', 80),
+('Samantha Spears', 83),
+('Anne Matte', 60),
+('Dick Donaldson', 76),
+('Jill Black', 88),
+('James Green', 75),
+('Jock Sespaniak', 64),
+('Gerard Runner', 58),
+('Tom Booths', 90),
+('Bill Brady', 69),
+('Walter Brady', 70),
+('Julia Arnold', 74);
 ```
 <br><br>
 
