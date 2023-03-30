@@ -1,40 +1,11 @@
-# Player Points (Error in table update)
-We have a **players** table that gets updated every year, with the new lifetime total
-of goals for the player after the latest season. This year, instead of updating the goals 
-total, an employee errored and did an insert.
+-- Setup
 
-### Players table
-| Column      | Type |
-|-------------| ---- |
-| id          | varchar |
-| first_name  | varchar |
-| last_name   | varchar |
-| total_goals | int |
- | club_id     | int |
-
-Please note that the id is a varchar.
-<br><br>
-
-## Question
-Write a query to get current goal total for each player.  
-Assume no players have the same first-last name combination.
-
-### Expected output
-| Column      | Type |
-|-------------| ---- |
-| first_name  | varchar |
-| last_name   | varchar |
-| total_goals | int |  
-
-<br><br>
-
-## Setup
-```postgresql
+-- The players table
 DROP TABLE IF EXISTS public.players;
 
 CREATE TABLE IF NOT EXISTS public.players
 (
-    id varchar NOT NULL,
+    id varchar NOT NULL, -- notice id is varchar!
     first_name varchar(30) NOT NULL,
     last_name varchar(30) NOT NULL,
     total_goals integer NOT NULL,
@@ -54,11 +25,13 @@ insert into players values
 ('9', 'Tom', 'Booths', 90, 1),
 ('10', 'Bill', 'Brady', 133, 1);
 
+
+-- The clubs table
 DROP TABLE IF EXISTS public.clubs;
 
 CREATE TABLE IF NOT EXISTS public.clubs
 (
-    id serial primary key, 
+    id serial primary key,
     club_name varchar(30) NOT NULL
 );
 
@@ -68,19 +41,15 @@ values
 ('Melaluka Farms'),
 ('Cane Cooks'),
 ('Cypress Sprinters');
-```
-<br><br>
 
-## Solution
-```postgresql
+
+/* Question : there are multiple entries for some players due to an etl error.
+Get each players current goal total. */
+
+-- Solution
 select p.first_name, p.last_name, p.total_goals
 from players p
 join (select max(id::int) as id, first_name, last_name
 		from players
 		group by first_name, last_name) as t
 on p.id::int = t.id
-```
-<br>
-
-## Tags
-type coercion, subquery, group by, max()

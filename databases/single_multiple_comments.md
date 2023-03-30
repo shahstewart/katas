@@ -31,25 +31,25 @@ DROP TABLE IF EXISTS public.comments;
 
 CREATE TABLE IF NOT EXISTS public.comments
 (
-    id integer NOT NULL,
+    id serial primary key,
     post_id integer NOT NULL,
     user_id integer NOT NULL,
-	date_posted timestamp not null,
-    CONSTRAINT comments_pkey PRIMARY KEY (id)
+	date_posted timestamp not null
 );
 
-insert into comments values
-(1, 1, 3, '2023-3-2 10:30:30'),
-(2, 2, 2, '2023-3-2 10:33:30'),
-(3, 1, 3, '2023-3-2 10:37:30'),
-(4, 3, 1, '2023-3-2 10:37:50'),
-(5, 4, 4, '2023-3-2 10:40:30'),
-(6, 1, 3, '2023-3-2 10:44:30'),
-(7, 2, 2, '2023-3-2 10:48:30'),
-(8, 5, 4, '2023-3-2 10:49:30'),
-(9, 6, 4, '2023-3-2 10:50:30'),
-(10, 1, 3, '2023-3-2 10:51:30'),
-(11, 7, 5, '2023-3-2 10:53:30');
+insert into comments (post_id, user_id, date_posted)
+values
+(1, 3, '2023-3-2 10:30:30'),
+(2, 2, '2023-3-2 10:33:30'),
+(1, 3, '2023-3-2 10:37:30'),
+(3, 1, '2023-3-2 10:37:50'),
+(4, 4, '2023-3-2 10:40:30'),
+(1, 3, '2023-3-2 10:44:30'),
+(2, 2, '2023-3-2 10:48:30'),
+(5, 4, '2023-3-2 10:49:30'),
+(6, 4, '2023-3-2 10:50:30'),
+(1, 3, '2023-3-2 10:51:30'),
+(7, 5, '2023-3-2 10:53:30');
 ```
 
 <br><br>
