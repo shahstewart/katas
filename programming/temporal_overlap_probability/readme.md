@@ -16,7 +16,17 @@ The problem basically involves getting the probability of a temporal overlap bet
 events, each lasting 60 minutes, within the time-window of 5 hours (300 minutes).
 
 
-## Tests
+### Solutions
+Here, the same solution is presented in both python and R. It basically involves simulating 10000
+job1 and job2 start times by generating a random int between 1 and 300 (5 hours). If the 2 start 
+times lie within 60 minutes, they overlap. 10000 is fairly large number, allowing us to accurately 
+calculate the probability of the overlap using this simulation.
+
+Using the probability, annual cost is estimated as:  
+365 x overlap_probability x cost_per_downtime 
+
+
+### Tests
 **Python:**   
 Using _pytest_.  
 Run `py.test` from `katas/programming/temporal_overlap_probability/python`
