@@ -1,7 +1,7 @@
 ## Over 120 dollars total transactions
 
 ### Description  
-orders and products are two dataframes holding Orders and products respectively.
+orders and products are two dataframes holding order and product details respectively.
 
 **The orders dataframe:**
 
@@ -12,6 +12,7 @@ orders and products are two dataframes holding Orders and products respectively.
 | quantity    | float |
 
 <br>
+
 **The products dataframe:**  
 
 | Column     | dType |
@@ -20,15 +21,20 @@ orders and products are two dataframes holding Orders and products respectively.
 | price      | float |
 
 
-Each order corresponds only to one product. That is, different products are ordered as 2 separate orders. 
-Given the two dataframes above, write a function to return a dataframe containing every order with a total 
-value of over $120 Include the total value of the transaction as a new column in the dataframe.
+Each order corresponds only to one product. That is, different products are ordered as separate orders. 
+
+<br>
+
+### Task
+Given the two dataframes above, write a function to return a dataframe containing orders with a total 
+of over $120. Include the total value of the transaction as a new column (total_amount) in the dataframe.
+Return the dataframe sorted by order id.
 
 <br>
 
 ### Solutions
 Solutions are provided in Python and R. First, the dataframes are merged, and the total amount is calculated 
-by multiplying quantity with price. Then the orders are filtered for total amount > 120..
+by multiplying quantity with price. Then the orders are filtered for total amount > 120.
 
 <br>  
 
