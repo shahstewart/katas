@@ -48,8 +48,8 @@ friendships = [{
 
 <br><br>
 ### Solutions
-A python solution that uses looping over the list is given here.  
-A solution using pandas dataframes can be found in the `katas/pandasNdataFrames/friendships_timeline` folder.
+A python solution that uses pandas dataframes is given here.  
+A solution with looping over the lists can be found in the `katas/programming/friendships_timeline` folder.
 
 <br><br>
 ### Tests
