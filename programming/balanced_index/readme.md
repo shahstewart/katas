@@ -6,4 +6,5 @@ is equal to the sum of right half. If there is no index where this condition is 
 
 
 ### Tests
-**Python:** with _pytest_,  run `py.test` from the python folder (`katas/programming/balanced_index/python`) 
+**Python:** with _pytest_,  run `py.test` from the python folder (`katas/programming/balanced_index/python`)  
+**JavaScript:** with _mocha_, run `mocha test.js` from the js folder (`katas/programming/balanced_index/js`)
